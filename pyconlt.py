@@ -40,6 +40,13 @@ app = Django(
             "PASSWORD": sec.load("POSTGRESQL_PASSWORD", "postgres"),
             "HOST": sec.load("POSTGRESQL_HOST", "localhost"),
             "PORT": int(sec.load("POSTGRESQL_PORT", "5432")),
+            "OPTIONS": {
+                "pool": {
+                    "min_size": 2,
+                    "max_size": 90,
+                    "timeout": 10,
+                }
+            },
         }
     },
 )
