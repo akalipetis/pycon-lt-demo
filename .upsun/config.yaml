@@ -93,7 +93,7 @@ applications:
       build: |
         set -eux
         uv sync
-        uv run nanodjango collectstatic
+        uv run nanodjango manage pyconlt.py collectstatic -- --noinput
 
       deploy: |
         set -eux
