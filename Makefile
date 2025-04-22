@@ -1,4 +1,4 @@
-LOAD_HOST = http://localhost:8000
+LOAD_HOST = http://localhost:8000/
 LOAD_CONCURRENCY = 10
 LOAD_DURATION = 5s
 PORT = 8000
@@ -19,4 +19,4 @@ dev:
 	uv run nanodjango run pyconlt.py
 
 loadtest:
-	echo "GET $(LOAD_HOST)/api/" | vegeta attack -duration=$(LOAD_DURATION) -max-workers=$(LOAD_CONCURRENCY) | tee report.bin | vegeta report
+	echo "GET $(LOAD_HOST)api/" | vegeta attack -duration=$(LOAD_DURATION) -max-workers=$(LOAD_CONCURRENCY) | tee report.bin | vegeta report

@@ -20,4 +20,4 @@ For an improvement to better leverate asyncio checkout the `feat/asyncio` branch
 
 ## Load testing
 
-You can use your tool of choice for load testing the application. Included is a demo load test using vegeta which you can run with this command `make loadtest my-app.eu-5.platform.sh`, after replacing the URL provided by Upsun, or any other host you have your application running.
+You can use your tool of choice for load testing the application. Included is a demo load test using vegeta which you can run with this command `make loadtest https://my-app.eu-5.platform.sh/`, after replacing the URL provided by Upsun, or any other host you have your application running.
