@@ -69,6 +69,7 @@ applications:
         PYTHONUNBUFFERED: "1"
         UV_PYTHON_DOWNLOADS: never
         UV_NO_CACHE: "true"
+        UV_LINK_MODE: "copy"
 
     # Outbound firewall rules for the application. More information: https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html#firewall
     # firewall:
