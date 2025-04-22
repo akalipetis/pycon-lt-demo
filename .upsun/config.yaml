@@ -7,7 +7,7 @@ applications:
 
     # The runtime the application uses.
     # Complete list of available runtimes: https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html#types
-    type: "python:3.13"
+    type: "python:3.12"
 
     # Choose which container profile (ratio CPU+RAM) your app will use. Default value comes from the image itself.
     # More information: https://docs.upsun.com/manage-resources/adjust-resources.html#adjust-a-container-profile
