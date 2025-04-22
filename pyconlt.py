@@ -4,6 +4,7 @@ import time
 from typing import List
 
 import sec
+from asgiref.sync import sync_to_async
 from django.db import models
 from nanodjango import Django
 
@@ -92,12 +93,12 @@ class ResponseSchema(app.ninja.Schema):
 
 async def get_conferences():
     await asyncio.sleep(2)  # Artificial delay
-    return Conference.objects.all()
+    return await sync_to_async(list)(Conference.objects.all())
 
 
 async def get_talks():
     await asyncio.sleep(2)  # Artificial delay
-    return Talk.objects.all()
+    return await sync_to_async(list)(Talk.objects.all())
 
 
 @app.api.get("/", response=ResponseSchema)
@@ -109,6 +110,6 @@ async def api_view(request):
     )
     logger.info(f"Conferences and talks fetched time={time.time() - start:0.2f}")
     return {
-        "conferences": [c async for c in conferences],
-        "talks": [t async for t in talks],
+        "conferences": conferences,
+        "talks": talks,
     }
