@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import time
 from typing import List
@@ -89,20 +90,25 @@ class ResponseSchema(app.ninja.Schema):
     talks: List[TalkSchema]
 
 
-def get_conferences():
-    time.sleep(2)  # Artificial delay
-    return list(Conference.objects.all().values())
+async def get_conferences():
+    await asyncio.sleep(2)  # Artificial delay
+    return Conference.objects.all()
 
 
-def get_talks():
-    time.sleep(2)  # Artificial delay
-    return list(Talk.objects.all().values())
+async def get_talks():
+    await asyncio.sleep(2)  # Artificial delay
+    return Talk.objects.all()
 
 
 @app.api.get("/", response=ResponseSchema)
-def api_view(request):
+async def api_view(request):
     start = time.time()
-    conferences = [conference for conference in get_conferences()]
-    talks = [talk for talk in get_talks()]
+    conferences, talks = await asyncio.gather(
+        get_conferences(),
+        get_talks(),
+    )
     logger.info(f"Conferences and talks fetched time={time.time() - start:0.2f}")
-    return {"conferences": conferences, "talks": talks}
+    return {
+        "conferences": [c async for c in conferences],
+        "talks": [t async for t in talks],
+    }
