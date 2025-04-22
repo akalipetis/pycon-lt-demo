@@ -37,7 +37,7 @@ app = Django(
             "USER": sec.load("POSTGRESQL_USERNAME", "postgres"),
             "PASSWORD": sec.load("POSTGRESQL_PASSWORD", "postgres"),
             "HOST": sec.load("POSTGRESQL_HOST", "localhost"),
-            "PORT": int(sec.load("POSTGRESQL_PORT", 5432)),
+            "PORT": int(sec.load("POSTGRESQL_PORT", "5432")),
         }
     },
 )
