@@ -63,11 +63,11 @@ applications:
     # access:
 
     # Variables to control the environment. More information: https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html#variables
-    # variables:
-    env:
-      # Add environment variables here that are static.
-      PYTHONUNBUFFERED: "1"
-      UV_PYTHON_DOWNLOADS: never
+    variables:
+      env:
+        # Add environment variables here that are static.
+        PYTHONUNBUFFERED: "1"
+        UV_PYTHON_DOWNLOADS: never
 
     # Outbound firewall rules for the application. More information: https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html#firewall
     # firewall:
