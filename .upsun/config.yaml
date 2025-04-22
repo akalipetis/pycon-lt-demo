@@ -94,7 +94,7 @@ applications:
       # More information: https://docs.upsun.com/create-apps/hooks/hooks-comparison.html#build-hook
       build: |
         set -eux
-        UV_NO_CACHE=false uv sync
+        UV_NO_CACHE=false uv sync --no-dev
         uv run nanodjango manage pyconlt.py collectstatic -- --noinput
 
       deploy: |
