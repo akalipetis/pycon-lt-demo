@@ -94,8 +94,8 @@ def get_talks():
 
 @app.api.get("/", response=ResponseSchema)
 def api_view(request):
-    logger.info("API view called")
+    start = time.time()
     conferences = [conference for conference in get_conferences()]
     talks = [talk for talk in get_talks()]
-    logger.info("Conferences and talks fetched")
+    logger.info(f"Conferences and talks fetched time={time.time() - start:0.2f}")
     return {"conferences": conferences, "talks": talks}
