@@ -4,7 +4,7 @@ LOAD_DURATION = 5s
 PORT = 8000
 
 gunicorn:
-	uv run gunicorn -w 4 pyconlt:app --port=$(PORT)
+	uv run gunicorn -w 4 --bind 127.0.0.1:$(PORT) pyconlt:app
 
 uvicorn:
 	uv run uvicorn pyconlt:app.asgi --interface asgi3 --port "$(PORT)"

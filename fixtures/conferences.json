@@ -1,0 +1,119 @@
+[
+    {
+        "model": "pyconlt.conference",
+        "pk": 1,
+        "fields": {
+            "name": "PyCon LT 2009",
+            "year": 2009,
+            "location": "KTU gimnazija, Studentų g. 65, Kaunas"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 2,
+        "fields": {
+            "name": "PyCon LT 2012",
+            "year": 2012,
+            "location": "VIKO, J. Jasinskio g. 15, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 3,
+        "fields": {
+            "name": "PyCon LT 2013",
+            "year": 2013,
+            "location": "Hub Vilnius, Šermukšnių 6A, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 4,
+        "fields": {
+            "name": "PyCon LT 2014",
+            "year": 2014,
+            "location": "VU MIF, Naugarduko g. 24, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 5,
+        "fields": {
+            "name": "PyCon LT 2015",
+            "year": 2015,
+            "location": "VU MIF, Naugarduko g. 24, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 6,
+        "fields": {
+            "name": "PyCon LT 2016",
+            "year": 2016,
+            "location": "VU MIF, Naugarduko g. 24, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 7,
+        "fields": {
+            "name": "PyCon LT 2017",
+            "year": 2017,
+            "location": "K. Baršausko g. 59., Kaunas"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 8,
+        "fields": {
+            "name": "PyCon LT 2018",
+            "year": 2018,
+            "location": "K. Baršausko g. 59., Kaunas"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 9,
+        "fields": {
+            "name": "PyCon LT 2019",
+            "year": 2019,
+            "location": "University of Social Sciences, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 10,
+        "fields": {
+            "name": "PyCon LT 2021",
+            "year": 2021,
+            "location": "Best Western, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 11,
+        "fields": {
+            "name": "PyCon LT 2022",
+            "year": 2022,
+            "location": "University of Social Sciences, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 12,
+        "fields": {
+            "name": "PyCon LT 2023",
+            "year": 2023,
+            "location": "Crowne Plaza Hotel, Vilnius"
+        }
+    },
+    {
+        "model": "pyconlt.conference",
+        "pk": 13,
+        "fields": {
+            "name": "PyCon LT 2024",
+            "year": 2024,
+            "location": "University of Social Sciences, Vilnius"
+        }
+    }
+]

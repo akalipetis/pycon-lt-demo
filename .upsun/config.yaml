@@ -100,6 +100,7 @@ applications:
       deploy: |
         set -eux
         uv run nanodjango manage pyconlt.py migrate
+        uv run nanodjango manage pyconlt.py loaddata fixtures/talks.json fixtures/conferences.json
 
       # The post_deploy hook is run after the app container has been started and after it has started accepting requests.
       # More information: https://docs.upsun.com/create-apps/hooks/hooks-comparison.html#deploy-hook

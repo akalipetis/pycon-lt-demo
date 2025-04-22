@@ -1,0 +1,47 @@
+[
+    {
+        "model": "pyconlt.talk",
+        "pk": 1,
+        "fields": {
+            "title": "Python Containers: Best Practices",
+            "speaker": "Daniel Hervás",
+            "description": "Previous basic knowledge on containers/Docker/containerfiles/Dockerfiles would be recommended."
+        }
+    },
+    {
+        "model": "pyconlt.talk",
+        "pk": 2,
+        "fields": {
+            "title": "I want to deploy my Flask app on Kubernetes, what are my options?",
+            "speaker": "David Andersson, Javier de la Puente",
+            "description": "Some web application development experience, can be beginner."
+        }
+    },
+    {
+        "model": "pyconlt.talk",
+        "pk": 3,
+        "fields": {
+            "title": "Coding Aesthetics: PEP 8, Existing Conventions, and Beyond",
+            "speaker": "Shiva Bhusal",
+            "description": "Just Basic skills and experience with Python programming language should be fine."
+        }
+    },
+    {
+        "model": "pyconlt.talk",
+        "pk": 4,
+        "fields": {
+            "title": "Sync or async? Feel the magic of coroutines and the event loop in Django",
+            "speaker": "Antonis Kalipetis",
+            "description": "At least knowing how to code in Python. Knowledge of parallel or concurrent programming might help, but this will still be explained in the beginning."
+        }
+    },
+    {
+        "model": "pyconlt.talk",
+        "pk": 5,
+        "fields": {
+            "title": "Architecture as Code (AaC) with Python",
+            "speaker": "Ruslan Korniichuk",
+            "description": "There are no prerequisites for attending this talk; everyone is welcome regardless of prior knowledge."
+        }
+    }
+]

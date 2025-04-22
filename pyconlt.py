@@ -1,11 +1,13 @@
 import logging
 import time
+from typing import List
 
 import sec
 from django.db import models
 from nanodjango import Django
 
 logger = logging.getLogger("pyconlt")
+
 
 app = Django(
     SECRET_KEY="nanodjango-secret-key",
@@ -63,6 +65,23 @@ class Talk(models.Model):
         return self.title
 
 
+class ConferenceSchema(app.ninja.ModelSchema):
+    class Meta:
+        model = Conference
+        fields = ["id", "name", "year", "location"]
+
+
+class TalkSchema(app.ninja.ModelSchema):
+    class Meta:
+        model = Talk
+        fields = ["id", "title", "speaker", "description"]
+
+
+class ResponseSchema(app.ninja.Schema):
+    conferences: List[ConferenceSchema]
+    talks: List[TalkSchema]
+
+
 def get_conferences():
     time.sleep(2)  # Artificial delay
     return list(Conference.objects.all().values())
@@ -73,10 +92,10 @@ def get_talks():
     return list(Talk.objects.all().values())
 
 
-@app.api.get("/")
+@app.api.get("/", response=ResponseSchema)
 def api_view(request):
     logger.info("API view called")
-    conferences = get_conferences()
-    talks = get_talks()
+    conferences = [conference for conference in get_conferences()]
+    talks = [talk for talk in get_talks()]
     logger.info("Conferences and talks fetched")
     return {"conferences": conferences, "talks": talks}
