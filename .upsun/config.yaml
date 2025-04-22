@@ -68,6 +68,7 @@ applications:
         # Add environment variables here that are static.
         PYTHONUNBUFFERED: "1"
         UV_PYTHON_DOWNLOADS: never
+        UV_NO_CACHE: "true"
 
     # Outbound firewall rules for the application. More information: https://docs.upsun.com/create-apps/app-reference/single-runtime-image.html#firewall
     # firewall:
@@ -92,7 +93,7 @@ applications:
       # More information: https://docs.upsun.com/create-apps/hooks/hooks-comparison.html#build-hook
       build: |
         set -eux
-        uv sync
+        UV_NO_CACHE=false uv sync
         uv run nanodjango manage pyconlt.py collectstatic -- --noinput
 
       deploy: |
